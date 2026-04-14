@@ -43,22 +43,33 @@ a{color:inherit}
 /* ── LANDING ── */
 #landing{background:var(--bg)}
 .topbar-line{position:fixed;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-m));z-index:100}
-.landing-inner{max-width:640px;width:100%;margin:0 auto;text-align:center;padding:5rem 2rem 3rem}
-.badge{display:inline-block;background:var(--accent-l);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:2rem;border:1px solid rgba(194,65,12,.2)}
-.landing-title{font-size:clamp(2.5rem,6vw,3.75rem);font-weight:800;color:var(--ink);margin-bottom:1.25rem;line-height:1.1}
-.landing-title span{color:var(--accent)}
-.landing-sub{font-size:1.2rem;color:var(--muted);margin-bottom:.75rem;font-weight:300}
-.landing-desc{font-size:1rem;color:var(--faint);margin:0 auto 3rem;max-width:480px}
-.btn-primary{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:14px 32px;font-size:1rem;font-weight:600;transition:background .15s,transform .15s}
-.btn-primary:hover{background:#b03d0a;transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--muted);border:1px solid var(--border-s);border-radius:4px;padding:14px 24px;font-size:.9rem;transition:all .15s}
-.btn-secondary:hover{border-color:var(--muted);color:var(--ink)}
-.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem}
-.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;text-align:left;margin-bottom:2.5rem}
-.feature-card{padding:1.25rem;background:var(--surface);border-radius:8px;border:1px solid var(--border)}
-.feature-label{font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.06em}
-.feature-desc{font-size:.875rem;color:var(--muted);line-height:1.4}
-.privacy-note{font-size:.8rem;color:var(--faint)}
+/* ── LANDING REDESIGN ── */
+#landing{background:#1a2640;min-height:100vh;display:flex;flex-direction:column}
+.landing-topbar{position:fixed;top:0;left:0;right:0;z-index:50;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(26,38,64,.92);backdrop-filter:blur(12px)}
+.landing-brand{font-family:var(--font-d);font-size:1.05rem;color:#fff;letter-spacing:.01em}
+.landing-brand span{color:#c8a96e}
+.feedback-btn{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.5);background:none;border:1px solid rgba(255,255,255,.18);border-radius:4px;padding:6px 14px;cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
+.feedback-btn:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.landing-inner{flex:1;display:flex;align-items:center;padding:7rem 2rem 4rem;max-width:820px;margin:0 auto;width:100%}
+.landing-hero{width:100%}
+.landing-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#c8a96e;margin-bottom:1.5rem}
+.landing-title{font-family:var(--font-d);font-size:clamp(2.4rem,5.5vw,3.75rem);font-weight:400;color:#fff;line-height:1.1;margin-bottom:1.5rem;letter-spacing:-.01em}
+.landing-title em{font-style:italic;color:#e8d5a8}
+.landing-sub{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.6);margin-bottom:.75rem;line-height:1.65;max-width:520px}
+.research-statement{font-size:.8rem;color:rgba(255,255,255,.35);margin-bottom:2.75rem;line-height:1.5}
+.cta-row{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.btn-primary{background:#c8a96e;color:#1a2640;border:none;border-radius:4px;padding:14px 32px;font-size:.95rem;font-weight:600;font-family:var(--font-b);transition:all .15s;cursor:pointer;letter-spacing:.01em}
+.btn-primary:hover{background:#e8d5a8;transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:14px 24px;font-size:.9rem;font-family:var(--font-b);transition:all .15s;cursor:pointer}
+.btn-secondary:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.cta-note{font-size:.78rem;color:rgba(255,255,255,.28);line-height:1.55}
+.landing-divider{border:none;border-top:1px solid rgba(255,255,255,.08);max-width:820px;margin:0 auto;width:calc(100% - 4rem)}
+.covers{max-width:820px;margin:0 auto;padding:2.5rem 2rem 4rem;width:100%}
+.covers-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:1.25rem}
+.covers-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.25rem}
+.covers-item{display:flex;align-items:baseline;gap:.75rem;padding:.55rem 0;font-size:.875rem;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.06)}
+.covers-item .cn{font-family:var(--font-d);font-size:.95rem;color:rgba(200,169,110,.45);font-style:italic;flex-shrink:0;width:1.2rem}
+.privacy-note{margin-top:1.75rem;font-size:.75rem;color:rgba(255,255,255,.2)}
 
 /* ── ASSESS LAYOUT ── */
 #assess{background:var(--bg)}
@@ -329,14 +340,24 @@ a{color:inherit}
 .modal-plan-loading.active{display:flex}
 .modal-plan-error{background:#fff5f5;border:1px solid #fca5a5;border-radius:6px;padding:1rem;color:#991b1b;font-size:.875rem;display:none;margin-top:1rem}
 /* research badge strip */
-.research-badge-strip{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem;margin-top:1rem;padding:.75rem 1rem;background:rgba(255,255,255,.15);border-radius:6px;border:1px solid rgba(255,255,255,.25)}
-.rb-label{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.06em;margin-right:.2rem}
-.rb-item{font-size:.78rem;color:rgba(255,255,255,.9);font-weight:500}
-.rb-sep{color:rgba(255,255,255,.4);font-size:.75rem}
+.research-statement{margin-top:1.1rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5;letter-spacing:.01em}
 /* report evidence note */
 .evidence-note{background:var(--teal-l);border:1px solid rgba(13,115,119,.25);border-left:3px solid var(--teal);border-radius:6px;padding:.75rem 1.1rem;margin-bottom:2rem;font-size:.82rem;color:#0a4a4d;line-height:1.55}
 .evidence-note strong{font-weight:600}
 
+/* bibliography */
+.r-bibliography{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--border)}
+.r-bibliography .s-heading{margin-bottom:1.25rem}
+.r-bibliography .s-num{font-size:.6rem;letter-spacing:.05em}
+.bib-body{font-size:.875rem;color:var(--muted);line-height:1.7}
+.bib-note{margin-bottom:1rem;color:var(--ink);font-weight:500}
+.bib-list{margin:0;padding-left:1.5rem;display:flex;flex-direction:column;gap:.85rem}
+.bib-list li{line-height:1.65}
+.bib-list em{font-style:italic;color:var(--ink)}
+.bib-list a{color:var(--accent);text-decoration:none;font-size:.8rem;white-space:nowrap}
+.bib-list a:hover{text-decoration:underline}
+.bib-disclaimer{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--faint);font-style:italic;line-height:1.55}
+@media print{.r-bibliography{page-break-before:always}}
 /* responsive */
 @media(max-width:600px){
   .plan-row{grid-template-columns:1fr}
@@ -358,36 +379,34 @@ a{color:inherit}
 
 <!-- ═══════ LANDING ═══════ -->
 <div id="landing" class="view active">
-  <div class="topbar-line"></div>
+  <nav class="landing-topbar">
+    <div class="landing-brand">Bar Bounceback <span>Diagnostic</span></div>
+    <a class="feedback-btn" href="/cdn-cgi/l/email-protection#385f595a5d784b48595b5d5c4a5d485d4c514c515756165b5755074b4d5a525d5b4c057e5d5d5c5a595b53185756187a594a187a574d565b5d5a595b53187c51595f56574b4c515b">Give feedback</a>
+  </nav>
   <div class="landing-inner">
-    <div class="badge">Diagnostic Tool</div>
-    <h1 class="landing-title">Bar Bounceback<br><span>Diagnostic</span></h1>
-    <p class="landing-sub">Figure out why you fell short — and what to do differently next time.</p>
-    <p class="landing-desc">A 10-minute structured assessment that identifies your specific failure modes and generates personalized, evidence-backed recommendations.</p>
-    <div class="research-badge-strip">
-      <span class="rb-label">Built on research from</span>
-      <span class="rb-item">AccessLex Institute</span>
-      <span class="rb-sep">·</span>
-      <span class="rb-item">University of Denver</span>
-      <span class="rb-sep">·</span>
-      <span class="rb-item">Roediger &amp; Karpicke (2006)</span>
-      <span class="rb-sep">·</span>
-      <span class="rb-item">Dunlosky et al. (2013)</span>
-      <span class="rb-sep">·</span>
-      <span class="rb-item">Jackson &amp; Cochran (2021)</span>
+    <div class="landing-hero">
+      <div class="landing-eyebrow">Bar Repeaters</div>
+      <h1 class="landing-title">Find out why you fell short,<br><em>and what to do differently next time.</em></h1>
+      <p class="landing-sub">7 sections, about 10 minutes. You'll get a specific analysis with actionable, cited recommendations, not generic study advice.</p>
+      <p class="research-statement">Recommendations grounded in published research on bar exam preparation and learning science.</p>
+      <div class="cta-row">
+        <button class="btn-primary" onclick="startAssess()">Start Assessment →</button>
+        <span class="cta-note">Free · No account needed<br>Nothing stored outside your browser</span>
+      </div>
     </div>
-    <div class="cta-row">
-      <button class="btn-primary" onclick="startAssess()">Start Assessment →</button>
+  </div>
+  <hr class="landing-divider">
+  <div class="covers">
+    <div class="covers-label">What it covers</div>
+    <div class="covers-list">
+      <div class="covers-item"><span class="cn">1</span>Exam results and score gap</div>
+      <div class="covers-item"><span class="cn">2</span>Study habits and time allocation</div>
+      <div class="covers-item"><span class="cn">3</span>Practice volume and feedback quality</div>
+      <div class="covers-item"><span class="cn">4</span>Timing and exam-day execution</div>
+      <div class="covers-item"><span class="cn">5</span>Exam experience and anxiety</div>
+      <div class="covers-item"><span class="cn">6</span>Self-assessment</div>
+      <div class="covers-item"><span class="cn">7</span>Life context and outside pressures</div>
     </div>
-    <div class="feature-grid">
-      <div class="feature-card"><div class="feature-label">Exam Results</div><div class="feature-desc">Score, margin, section performance</div></div>
-      <div class="feature-card"><div class="feature-label">Study Methods</div><div class="feature-desc">Time allocation, active vs. passive</div></div>
-      <div class="feature-card"><div class="feature-label">Practice Volume</div><div class="feature-desc">MBE reps, essays, MPTs, feedback</div></div>
-      <div class="feature-card"><div class="feature-label">Timing & Execution</div><div class="feature-desc">Pacing, incomplete answers, pressure</div></div>
-      <div class="feature-card"><div class="feature-label">Exam Experience</div><div class="feature-desc">Anxiety, stamina, recall on the day</div></div>
-      <div class="feature-card"><div class="feature-label">Personalized Plan</div><div class="feature-desc">Weekly targets tuned to your profile</div></div>
-    </div>
-    <p class="privacy-note">Nothing is stored. All data stays in your browser session.</p>
   </div>
 </div>
 
@@ -469,7 +488,7 @@ const S = [
       // ── Attempt history ──────────────────────────────────────────────────
       // Single question covers both firstAttempt and attemptCount
       {id:"attemptCount", lbl:"Including this attempt, how many times have you taken this exam?", type:"radio", req:true, opts:[
-        {v:"1",l:"Once — this was my first attempt"},
+        {v:"1",l:"Once (this was my first attempt)"},
         {v:"2",l:"Twice"},
         {v:"3",l:"Three times"},
         {v:"4+",l:"Four or more times"},
@@ -477,12 +496,12 @@ const S = [
 
       // ── Law school academic performance ──────────────────────────────────
       {id:"lawSchoolPerf", lbl:"How would you describe your academic performance in law school overall?", type:"radio", req:true,
-        hint:"Research from AccessLex Institute found that final law school GPA is the single strongest predictor of bar exam passage — stronger than LSAT score. This isn't meant to discourage anyone; it helps calibrate the right approach for your situation.",
+        hint:"Research from AccessLex Institute found that final law school GPA is the single strongest predictor of bar exam passage, stronger than LSAT score. This isn't meant to discourage; it helps calibrate the right approach for your situation.",
         opts:[
-          {v:"strong",    l:"Strong throughout — upper portion of my class"},
-          {v:"solid",     l:"Solid — middle of the class, no major academic difficulties"},
-          {v:"mixed",     l:"Mixed — started rough but improved significantly over time"},
-          {v:"difficult", l:"Consistently challenging — I struggled academically throughout"},
+          {v:"strong",    l:"Strong throughout, upper portion of my class"},
+          {v:"solid",     l:"Solid, middle of the class, no major academic difficulties"},
+          {v:"mixed",     l:"Mixed: started rough but improved significantly"},
+          {v:"difficult", l:"Consistently challenging, I struggled academically throughout"},
           {v:"unsure",    l:"I don't know / never paid close attention to class standing"},
         ]
       },
@@ -506,10 +525,10 @@ const S = [
         hint:"Check all that apply. If one section clearly pulled you down, check only that one.",
         condition: fd => fd.examFamily === "legacyUBE",
         opts:[
-          {v:"mbe",  l:"MBE (multiple-choice) — my MBE score was the main problem"},
-          {v:"mee",  l:"MEE (written essays) — my essays dragged the score down"},
-          {v:"mpt",  l:"MPT (performance test) — I struggled with the performance tasks"},
-          {v:"even", l:"All sections were roughly equal contributors — no single standout weakness"},
+          {v:"mbe",  l:"MBE (multiple-choice): my MBE score was the main problem"},
+          {v:"mee",  l:"MEE (written essays): my essays dragged the score down"},
+          {v:"mpt",  l:"MPT (performance test): I struggled with the performance tasks"},
+          {v:"even", l:"All sections were roughly equal contributors, no single standout weakness"},
           {v:"unsure",l:"I'm not sure which section hurt me most"},
         ]
       },
@@ -520,7 +539,7 @@ const S = [
           {v:"mcq",  l:"Standalone multiple-choice questions"},
           {v:"iqs",  l:"Integrated question sets (fact scenarios with mixed questions)"},
           {v:"pt",   l:"Performance tasks (document drafting, practical tasks)"},
-          {v:"even", l:"All sections were roughly equal — no single standout weakness"},
+          {v:"even", l:"All sections were roughly equal, no single standout weakness"},
           {v:"unsure",l:"I'm not sure which part hurt me most"},
         ]
       },
@@ -546,11 +565,7 @@ const S = [
           {v:"unsure", l:"I'm not sure / my exam didn't have separate components"},
         ]
       },
-      {id:"otherExamFormat", lbl:"Briefly describe your exam's format (optional)", type:"textarea",
-        hint:"e.g. Nevada: 6 state essays, MBE, 2 performance tests",
-        placeholder:"Only needed if your exam has an unusual structure",
-        condition: fd => ["nevada","louisiana","other"].includes(fd.examFamily)
-      },
+
 
     ]
   },
@@ -566,22 +581,22 @@ const S = [
         {v:"under20",l:"Fewer than 20 hours"},{v:"20-30",l:"20–30 hours"},{v:"31-40",l:"31–40 hours"},{v:"41-50",l:"41–50 hours"},{v:"over50",l:"More than 50 hours"}
       ]},
       {id:"workingDuringPrep", lbl:"Were you working during bar prep?", type:"radio", req:true, opts:[
-        {v:"fullTime",l:"Full-time (35+ hrs/week)"},{v:"partTime",l:"Part-time"},{v:"no",l:"No — studying full-time"}
+        {v:"fullTime",l:"Full-time (35+ hrs/week)"},{v:"partTime",l:"Part-time"},{v:"no",l:"No, studying full-time"}
       ]},
       {id:"courseCompletion", lbl:"What percentage of your course or study plan did you complete?", type:"radio", req:true, opts:[
         {v:"0-25",l:"0–25% (much less than planned)"},{v:"25-50",l:"25–50% (about half)"},
         {v:"50-75",l:"50–75% (most of it)"},{v:"75-100",l:"75–100% (nearly all)"}
       ]},
       {id:"studyStyle", lbl:"Overall, how would you describe your studying?", type:"radio", req:true, opts:[
-        {v:"passive",l:"Mostly passive — watched lectures, re-read outlines"},
-        {v:"mixed",l:"Mixed — some active, some passive"},
-        {v:"active",l:"Mostly active — tested myself, wrote answers, drilled"}
+        {v:"passive",l:"Mostly passive: lectures, re-reading outlines"},
+        {v:"mixed",l:"Mixed: some active, some passive"},
+        {v:"active",l:"Mostly active: self-testing, writing answers, drilling"}
       ]},
 
 
       {id:"pctAllocation", type:"pct_allocation", req:true,
         lbl:"How did you roughly split your study time? Enter percentages that add up to 100%.",
-        hint:"Don't overthink — a rough estimate is fine. They must total 100.",
+        hint:"Don't overthink, a rough estimate is fine. They must total 100.",
         fields:[
           {id:"pctLectures",     label:"Watching/listening to lectures"},
           {id:"pctMCQ",          label:"Doing MBE / multiple-choice questions"},
@@ -608,23 +623,23 @@ const S = [
         {v:"0",l:"None"},{v:"1-2",l:"1–2"},{v:"3-5",l:"3–5"},{v:"6-10",l:"6–10"},{v:"over10",l:"More than 10"}
       ]},
       {id:"essayFeedback", lbl:"Did anyone review your written work and give substantive feedback?", type:"radio", req:true, opts:[
-        {v:"regularly",l:"Yes, regularly"},{v:"sometimes",l:"Sometimes"},{v:"no",l:"No — wrote them but no real feedback"}
+        {v:"regularly",l:"Yes, regularly"},{v:"sometimes",l:"Sometimes"},{v:"no",l:"No, wrote them but got no real feedback"}
       ]},
       {id:"mockBarFeedback", lbl:"Did you participate in structured mock bar exams or writing workshops where you submitted answers and received individual written feedback?", type:"radio", req:true,
-        hint:"Research from the University of Denver found this to be the highest-ROI bar prep activity — each written submission with individual feedback was associated with a measurable score increase (Johns, 2016).",
+        hint:"Research from the University of Denver found this to be the highest-ROI bar prep activity: each written submission with individual feedback was associated with a measurable score increase (Johns, 2016).",
         opts:[
-          {v:"formal",     l:"Yes — through a formal program (law school bar support, BarBri workshop, etc.)"},
-          {v:"tutor",      l:"Yes — through a private tutor who gave written feedback on my answers"},
-          {v:"minimal",    l:"Somewhat — I submitted answers but feedback was generic or minimal"},
-          {v:"no_feedback",l:"No — I wrote practice answers but didn't submit them for individual feedback"},
-          {v:"no_writing", l:"No — I didn't do significant timed writing practice"},
+          {v:"formal",     l:"Yes, through a formal program (law school bar support, BarBri workshop, etc.)"},
+          {v:"tutor",      l:"Yes, through a private tutor who gave written feedback on my answers"},
+          {v:"minimal",    l:"Somewhat, I submitted answers but feedback was generic or minimal"},
+          {v:"no_feedback",l:"No, I wrote practice answers but didn't submit them for individual feedback"},
+          {v:"no_writing", l:"No, I didn't do significant timed writing practice"},
         ]
       },
       {id:"trackedMistakes", lbl:"Did you track your recurring mistakes or pattern weaknesses across subjects?", type:"radio", req:true, opts:[
-        {v:"yes",l:"Yes — kept a log or system"},{v:"informally",l:"Informally — noticed patterns but didn't track"},{v:"no",l:"No"}
+        {v:"yes",l:"Yes, I kept a log or system"},{v:"informally",l:"Informally, noticed patterns but didn't track"},{v:"no",l:"No"}
       ]},
       {id:"revisitedMissed", lbl:"How carefully did you analyze the questions or written responses you got wrong?", type:"radio", req:true, opts:[
-        {v:"regularly",l:"Regularly — core part of my process"},{v:"sometimes",l:"Sometimes"},{v:"rarely",l:"Rarely or never"}
+        {v:"regularly",l:"Regularly, core part of my process"},{v:"sometimes",l:"Sometimes"},{v:"rarely",l:"Rarely or never"}
       ]},
     ]
   },
@@ -636,23 +651,23 @@ const S = [
       {id:"timeIssues", lbl:"Which part(s) of the exam did you run out of time on?", type:"checkbox", req:true,
         hint:"Check all that apply.",
         opts:[
-          {v:"mcq",    l:"Multiple-choice — ran out of time or was guessing frantically near the end"},
-          {v:"essays", l:"Written section — couldn't finish one or more essays or written responses"},
-          {v:"pt",     l:"Performance test — ran out of time before completing the task"},
+          {v:"mcq",    l:"Multiple-choice: ran out of time or guessing frantically near the end"},
+          {v:"essays", l:"Written section: couldn't finish one or more essays"},
+          {v:"pt",     l:"Performance test: ran out of time before completing the task"},
           {v:"none",   l:"I didn't run out of time on any section"},
         ]
       },
       {id:"feltRushed", lbl:"Overall, how much did time pressure affect your experience on exam day?", type:"radio", req:true, opts:[
-        {v:"no",       l:"Not much — I felt reasonably in control of my pacing"},
-        {v:"sometimes",l:"Somewhat — it was a factor on certain sections or question types"},
-        {v:"yes",      l:"Significantly — I felt behind for much of the exam"},
-        {v:"severely", l:"It dominated my experience — time was my single biggest in-exam problem"},
+        {v:"no",       l:"Not much, I felt reasonably in control of my pacing"},
+        {v:"sometimes",l:"Somewhat, a factor on certain sections or question types"},
+        {v:"yes",      l:"Significantly, I felt behind for much of the exam"},
+        {v:"severely", l:"It dominated my experience, time was my single biggest problem on exam day"},
       ]},
       {id:"leftBlank", lbl:"Did you leave any answers blank or significantly incomplete?", type:"radio", req:true, opts:[
-        {v:"no",   l:"No — I answered everything, even if not confidently"},
-        {v:"few",  l:"A few — minor gaps"},
-        {v:"some", l:"Some — noticeably incomplete in places"},
-        {v:"many", l:"Several — a meaningful number left unanswered"},
+        {v:"no",   l:"No, I answered everything, even if not confidently"},
+        {v:"few",  l:"A few, minor gaps"},
+        {v:"some", l:"Some, noticeably incomplete in places"},
+        {v:"many", l:"Several, a meaningful number left unanswered"},
       ]},
     ]
   },
@@ -670,10 +685,10 @@ const S = [
         {v:"surprised",l:"I was surprised by how difficult the exam felt"}
       ]},
       {id:"anxietyAffected", lbl:"Did anxiety significantly affect your performance?", type:"radio", req:true, opts:[
-        {v:"yes",l:"Yes — it clearly hurt my performance"},{v:"maybe",l:"Maybe — not sure"},{v:"no",l:"No — not a significant factor"}
+        {v:"yes",l:"Yes, it clearly hurt my performance"},{v:"maybe",l:"Maybe, not entirely sure"},{v:"no",l:"No, not a significant factor"}
       ]},
       {id:"staminaDrop", lbl:"Did your focus or stamina noticeably decline over the exam?", type:"radio", req:true, opts:[
-        {v:"yes",l:"Yes — I faded toward the end"},{v:"somewhat",l:"Somewhat"},{v:"no",l:"No — stayed relatively consistent"}
+        {v:"yes",l:"Yes, I faded toward the end"},{v:"somewhat",l:"Somewhat"},{v:"no",l:"No, stayed relatively consistent"}
       ]},
     ]
   },
@@ -683,14 +698,14 @@ const S = [
     id:"self", title:"Self-Assessment", sub:"Your perspective on what went wrong is important data.",
     qs:[
       {id:"biggestProblem", lbl:"Looking back, what was your single biggest problem?", type:"radio", req:true, opts:[
-        {v:"memorization",     l:"Memorization — I couldn't recall enough rules when it counted"},
-        {v:"application",      l:"Application — I knew the rules but couldn't deploy them under pressure"},
-        {v:"timing",           l:"Timing — I ran out of time too often"},
-        {v:"consistency",      l:"Consistency — my studying was uneven, incomplete, or fell apart"},
-        {v:"burnout",          l:"Burnout — I ran out of steam before the exam"},
-        {v:"badMethods",       l:"Method mismatch — I studied hard but not in the right ways"},
-        {v:"notEnoughPractice",l:"Insufficient practice — I needed more reps, especially timed work"},
-        {v:"notSure",          l:"I genuinely don't know — that's part of why I'm here"},
+        {v:"memorization",     l:"Memorization: I couldn't recall enough rules when it counted"},
+        {v:"application",      l:"Application: I knew the rules but couldn't deploy them under pressure"},
+        {v:"timing",           l:"Timing: I ran out of time too often"},
+        {v:"consistency",      l:"Consistency: my studying was uneven, incomplete, or fell apart"},
+        {v:"burnout",          l:"Burnout: I ran out of steam before the exam"},
+        {v:"badMethods",       l:"Method mismatch: I studied hard but not in the right ways"},
+        {v:"notEnoughPractice",l:"Insufficient practice: I needed more reps, especially timed work"},
+        {v:"notSure",          l:"I genuinely don't know; that's part of why I'm here"},
       ]},
 
 
@@ -701,7 +716,7 @@ const S = [
   {
     id:"wellbeing",
     title:"Life Context",
-    sub:"Bar prep doesn't happen in a vacuum. These questions help us understand what you were dealing with outside of studying — answers here inform the report and any plan we build for you.",
+    sub:"Bar prep doesn't happen in a vacuum. These questions help us understand what you were dealing with outside of studying, and answers here inform the report.",
     optional: true,
     qs:[
 
@@ -709,62 +724,62 @@ const S = [
         {v:"fullTime",  l:"Full-time (35+ hours/week)"},
         {v:"partTime",  l:"Part-time (under 35 hours/week)"},
         {v:"occasional",l:"Occasionally / freelance"},
-        {v:"no",        l:"No — I was studying full-time"},
+        {v:"no",        l:"No, I was studying full-time"},
       ]},
 
       {id:"commuteLoad", lbl:"How much time did commuting or travel eat into your study days?", type:"radio", req:false, opts:[
-        {v:"none",      l:"None — I worked from home or had no commute"},
-        {v:"light",     l:"Light — under 30 minutes each way"},
-        {v:"moderate",  l:"Moderate — 30–60 minutes each way"},
-        {v:"heavy",     l:"Heavy — over an hour each way, or long-distance"},
+        {v:"none",      l:"None, I worked from home or had no commute"},
+        {v:"light",     l:"Light, under 30 minutes each way"},
+        {v:"moderate",  l:"Moderate, 30–60 minutes each way"},
+        {v:"heavy",     l:"Heavy, over an hour each way or long-distance"},
       ]},
 
       {id:"caregiving", lbl:"Did you have significant caregiving responsibilities during prep?", type:"radio", req:false, opts:[
-        {v:"none",      l:"No — this wasn't a factor"},
-        {v:"children",  l:"Yes — children at home"},
-        {v:"family",    l:"Yes — caring for a family member or dependent adult"},
-        {v:"both",      l:"Yes — children and another dependent"},
+        {v:"none",      l:"No, this wasn't a factor"},
+        {v:"children",  l:"Yes, children at home"},
+        {v:"family",    l:"Yes, caring for a family member or dependent adult"},
+        {v:"both",      l:"Yes, children and another dependent"},
       ]},
 
       {id:"financialStress", lbl:"How much did financial pressure affect your focus during prep?", type:"radio", req:false, opts:[
-        {v:"none",      l:"Not significantly — I wasn't worried about money"},
-        {v:"some",      l:"Somewhat — it was in the background"},
-        {v:"significant",l:"Significantly — it was a real source of stress"},
-        {v:"severe",    l:"Severely — financial pressure dominated my thinking at times"},
+        {v:"none",      l:"Not significantly, I wasn't worried about money"},
+        {v:"some",      l:"Somewhat, it was in the background"},
+        {v:"significant",l:"Significantly, it was a real source of stress"},
+        {v:"severe",    l:"Severely, financial pressure dominated my thinking at times"},
       ]},
 
       {id:"mentalHealthLoad", lbl:"Did mental health challenges affect your ability to study or perform?", type:"radio", req:false, opts:[
-        {v:"no",        l:"No — this wasn't a factor"},
-        {v:"mild",      l:"Mild — manageable, but present"},
-        {v:"moderate",  l:"Moderate — it got in the way fairly often"},
-        {v:"significant",l:"Significant — depression, anxiety, or similar meaningfully disrupted my prep"},
+        {v:"no",        l:"No, this wasn't a factor"},
+        {v:"mild",      l:"Mild, manageable but present"},
+        {v:"moderate",  l:"Moderate, it got in the way fairly often"},
+        {v:"significant",l:"Significant: depression, anxiety, or similar meaningfully disrupted my prep"},
       ]},
 
-      {id:"testAnxiety", lbl:"Did anxiety specifically about the exam — before or during it — affect you?", type:"radio", req:false, opts:[
-        {v:"no",        l:"No — exam anxiety wasn't a significant issue"},
-        {v:"prep",      l:"During prep — worry about the exam disrupted studying"},
-        {v:"exam",      l:"On exam day — anxiety visibly hurt my performance"},
-        {v:"both",      l:"Both — anxiety affected both my preparation and exam-day performance"},
+      {id:"testAnxiety", lbl:"Did anxiety about the exam, before or during it, affect you?", type:"radio", req:false, opts:[
+        {v:"no",        l:"No, exam anxiety wasn't a significant issue"},
+        {v:"prep",      l:"During prep: worry about the exam disrupted studying"},
+        {v:"exam",      l:"On exam day: anxiety visibly hurt my performance"},
+        {v:"both",      l:"Both, anxiety affected both my preparation and exam-day performance"},
       ]},
 
       {id:"sleepQuality", lbl:"How was your sleep during the study period and exam week?", type:"radio", req:false, opts:[
-        {v:"good",      l:"Good — I slept well most nights"},
-        {v:"mixed",     l:"Mixed — some nights fine, others poor"},
-        {v:"poor",      l:"Poor — consistently disrupted or insufficient"},
-        {v:"veryPoor",  l:"Very poor — sleep was a serious problem"},
+        {v:"good",      l:"Good, I slept well most nights"},
+        {v:"mixed",     l:"Mixed, some nights fine, others poor"},
+        {v:"poor",      l:"Poor, consistently disrupted or insufficient"},
+        {v:"veryPoor",  l:"Very poor, sleep was a serious problem"},
       ]},
 
       {id:"supportSystem", lbl:"Did you have people around you who understood what you were going through?", type:"radio", req:false, opts:[
-        {v:"yes",       l:"Yes — strong support from people who got it"},
-        {v:"some",      l:"Some — a few people, but limited"},
-        {v:"no",        l:"No — I largely went through this alone"},
+        {v:"yes",       l:"Yes, strong support from people who understood"},
+        {v:"some",      l:"Some, a few people but limited"},
+        {v:"no",        l:"No, I largely went through this alone"},
         {v:"added",     l:"My situation added pressure on others, which added pressure on me"},
       ]},
 
       {id:"otherDistractions", lbl:"Were there any other major life events or disruptions during your prep?", type:"checkbox", req:false,
         hint:"Check all that apply.",
         opts:[
-          {v:"no",          l:"No — nothing out of the ordinary"},
+          {v:"no",          l:"No, nothing out of the ordinary"},
           {v:"health",      l:"Personal health issue or illness"},
           {v:"loss",        l:"Bereavement or significant loss"},
           {v:"relationship",l:"Major relationship change or breakdown"},
@@ -793,7 +808,8 @@ const SAMPLE = {
   timeIssues:["essays"],
   feltRushed:"sometimes",leftBlank:"few",
   examExperience:"recognizedNotWritten",anxietyAffected:"maybe",staminaDrop:"somewhat",
-  biggestProblem:"application",  workingDuringStudy:"no",
+  biggestProblem:"application",  wellbeingOptIn:"yes",
+  workingDuringStudy:"no",
   commuteLoad:"none",
   caregiving:"none",
   financialStress:"some",
@@ -1375,7 +1391,7 @@ function normalizeFormData(raw) {
 
 
 // ─── SCORING ───────────────────────────────────────────────────────────────────
-const FM={ruleDeficit:{n:"Rule Knowledge Deficit",s:"Rule Deficit",m:"You likely didn't have reliable command of enough black-letter law for consistent recall under exam conditions."},applicationDeficit:{n:"Application Deficit",s:"Application",m:"You may know rules in the abstract but struggle to deploy them fluently when analyzing facts and writing structured answers."},recognitionRecallGap:{n:"Recognition vs. Recall Gap",s:"Recall Gap",m:"You may do better recognizing correct answers than generating them from memory — a gap that matters heavily on written components."},timingExecution:{n:"Timing & Execution Failure",s:"Timing",m:"You likely had enough knowledge but poor pacing and execution under pressure reduced your score."},practiceDeficit:{n:"Practice Volume Deficit",s:"Practice Vol.",m:"You simply did not complete enough realistic, exam-like practice to build the fluency and stamina the exam demands."},methodMismatch:{n:"Method Mismatch",s:"Method Mismatch",m:"You may have studied in ways that felt productive but were low-yield — heavy on passive exposure, light on active retrieval and writing."},burnoutConsistency:{n:"Burnout & Consistency Failure",s:"Burnout",m:"Your study plan likely broke down at some point due to exhaustion, life demands, or an unsustainable pace."},anxietyInterference:{n:"Anxiety & Performance Interference",s:"Anxiety",m:"Anxiety or performance pressure likely depressed your score below what your actual knowledge level should have produced."},overconfidence:{n:"Overconfidence & Miscalibration",s:"Miscalibration",m:"You may have misread your readiness — your preparation didn't give you accurate feedback about where you stood."}};
+const FM={ruleDeficit:{n:"Rule Knowledge Deficit",s:"Rule Deficit",m:"You likely didn't have reliable command of enough black-letter law for consistent recall under exam conditions."},applicationDeficit:{n:"Application Deficit",s:"Application",m:"You may know rules in the abstract but struggle to deploy them fluently when analyzing facts and writing structured answers."},recognitionRecallGap:{n:"Recognition vs. Recall Gap",s:"Recall Gap",m:"You may do better recognizing correct answers than generating them from memory, a gap that matters heavily on written components."},timingExecution:{n:"Timing & Execution Failure",s:"Timing",m:"You likely had enough knowledge but poor pacing and execution under pressure reduced your score."},practiceDeficit:{n:"Practice Volume Deficit",s:"Practice Vol.",m:"You simply did not complete enough realistic, exam-like practice to build the fluency and stamina the exam demands."},methodMismatch:{n:"Method Mismatch",s:"Method Mismatch",m:"You may have studied in ways that felt productive but were low-yield, heavy on passive exposure, light on active retrieval and writing."},burnoutConsistency:{n:"Burnout & Consistency Failure",s:"Burnout",m:"Your study plan likely broke down at some point due to exhaustion, life demands, or an unsustainable pace."},anxietyInterference:{n:"Anxiety & Performance Interference",s:"Anxiety",m:"Anxiety or performance pressure likely depressed your score below what your actual knowledge level should have produced."},overconfidence:{n:"Overconfidence & Miscalibration",s:"Miscalibration",m:"You may have misread your readiness; your preparation didn't give you accurate feedback about where you stood."}};
 
 function scoreAll(rawD){
  const d = normalizeFormData(rawD);
@@ -1388,7 +1404,7 @@ function scoreAll(rawD){
   const gap = d._scoreGapPts || 18;
   // tiny (est. ~3 pts): near-miss — execution and anxiety dominate
   if (gap <= 5) {
-    sig('timingExecution',8,10,"Near-miss gap — execution under pressure is the primary suspect");
+    sig('timingExecution',8,10,"Near-miss gap, execution under pressure is the primary suspect");
     sig('anxietyInterference',7,10,"Near-miss results are frequently driven by anxiety on exam day");
     sig('overconfidence',3,10,"A very small gap can reflect borderline readiness across subjects");
   }
@@ -1430,10 +1446,10 @@ function scoreAll(rawD){
   if(v==='under20'){sig('practiceDeficit',10,10,"Under 20 hours/week is well below what most candidates need");sig('burnoutConsistency',4,10,"Very low hours may reflect capacity constraints");}
   else if(v==='20-30'){sig('practiceDeficit',5,10,"20–30 hours/week is below the ~40 hours most full-prep candidates target");}
  }
- if(d.workingDuringPrep==='fullTime'){sig('burnoutConsistency',12,12,"Full-time work — strongest predictor of burnout");sig('practiceDeficit',6,12,"Full-time work severely limits study time");}
+ if(d.workingDuringPrep==='fullTime'){sig('burnoutConsistency',12,12,"Full-time work, strongest predictor of burnout");sig('practiceDeficit',6,12,"Full-time work severely limits study time");}
  else if(d.workingDuringPrep==='partTime'){sig('burnoutConsistency',5,12,"Part-time work can fragment schedule and increase fatigue");}
 
- if(d.courseCompletion==='0-25'){sig('burnoutConsistency',14,14,"Completing 0–25% of plan — major consistency failure");sig('practiceDeficit',12,14,"Very low completion means critical content was skipped");sig('overconfidence',8,14,"Low completion combined with taking exam suggests miscalibration");}
+ if(d.courseCompletion==='0-25'){sig('burnoutConsistency',14,14,"Completing 0–25% of plan, major consistency failure");sig('practiceDeficit',12,14,"Very low completion means critical content was skipped");sig('overconfidence',8,14,"Low completion combined with taking exam suggests miscalibration");}
  else if(d.courseCompletion==='25-50'){sig('burnoutConsistency',9,14,"Completing half is a significant shortfall");sig('practiceDeficit',7,14,"Half completion means many practice reps were missed");}
  else if(d.courseCompletion==='50-75'){sig('burnoutConsistency',4,14,"50–75% completion left meaningful gaps");sig('practiceDeficit',3,14,"Some practice volume lost");}
 
@@ -1452,17 +1468,17 @@ function scoreAll(rawD){
  }
 
  {const v=parseInt(d.pctEssays)||0;
-  if(v<=5){sig('applicationDeficit',12,12,"Virtually no essay writing — strongest signal of application deficit");sig('methodMismatch',7,12,"Avoiding essays is a clear method mismatch");sig('recognitionRecallGap',7,12,"Without essay writing, recall for production never built");}
+  if(v<=5){sig('applicationDeficit',12,12,"Virtually no essay writing, strongest signal of application deficit");sig('methodMismatch',7,12,"Avoiding essays is a clear method mismatch");sig('recognitionRecallGap',7,12,"Without essay writing, recall for production never built");}
   else if(v<=10){sig('applicationDeficit',6,12,"Low essay writing suggests an application gap");sig('methodMismatch',3,12,"Essay time below recommended");}
  }
 
  {const v=parseInt(d.pctMemorization)||0;
-  if(v<=5){sig('ruleDeficit',12,12,"Very little active memorization — strongly signals rule recall gaps");sig('methodMismatch',8,12,"Skipping active recall is a method mismatch");sig('recognitionRecallGap',6,12,"Without retrieval practice, recall on exam day suffers");}
+  if(v<=5){sig('ruleDeficit',12,12,"Very little active memorization, strongly signals rule recall gaps");sig('methodMismatch',8,12,"Skipping active recall is a method mismatch");sig('recognitionRecallGap',6,12,"Without retrieval practice, recall on exam day suffers");}
   else if(v<=10){sig('ruleDeficit',6,12,"Memorization time below recommended");sig('methodMismatch',3,12,"Active recall time relatively low");}
  }
 
  {const v=parseInt(d.pctReviewingMistakes)||0;
-  if(v<=5){sig('methodMismatch',10,10,"Almost no mistake review — you likely repeated the same errors");sig('overconfidence',6,10,"Skipping review often reflects overconfidence");sig('practiceDeficit',4,10,"Mistake review is high-yield — skipping is a gap");}
+  if(v<=5){sig('methodMismatch',10,10,"Almost no mistake review; you likely repeated the same errors");sig('overconfidence',6,10,"Skipping review often reflects overconfidence");sig('practiceDeficit',4,10,"Mistake review is high-yield — skipping is a gap");}
   else if(v<=10)sig('methodMismatch',4,10,"Limited mistake review is a missed opportunity");
  }
 
@@ -1491,7 +1507,7 @@ function scoreAll(rawD){
  if(d.trackedMistakes==='no'){sig('methodMismatch',8,8,"Not tracking mistakes means repeated errors");sig('overconfidence',5,8,"Without tracking, easy to overestimate progress");}
  else if(d.trackedMistakes==='informally')sig('methodMismatch',3,8,"Informal tracking may miss systematic errors");
 
- if(d.revisitedMissed==='rarely'){sig('methodMismatch',10,10,"Rarely reviewing missed questions — high-impact gap");sig('ruleDeficit',5,10,"Without review, rule gaps likely repeated");sig('practiceDeficit',4,10,"Skipping review loses value from practice");}
+ if(d.revisitedMissed==='rarely'){sig('methodMismatch',10,10,"Rarely reviewing missed questions, a high-impact gap");sig('ruleDeficit',5,10,"Without review, rule gaps likely repeated");sig('practiceDeficit',4,10,"Skipping review loses value from practice");}
  else if(d.revisitedMissed==='sometimes')sig('methodMismatch',4,10,"Inconsistent mistake review left room for repeated errors");
 
  // mbeTimeIssues replaced by timeIssues checkbox — handled below
@@ -1500,7 +1516,7 @@ function scoreAll(rawD){
  {const ti=Array.isArray(d.timeIssues)?d.timeIssues:[];
   const tiCount=ti.filter(v=>v!=='none').length;
   const essayTi=ti.includes('essays');
-  if(tiCount>=2){sig('timingExecution',12,12,"Ran out of time on multiple exam sections — core timing/execution problem");sig('practiceDeficit',5,12,"Multi-section timing issues usually reflect insufficient timed practice");}
+  if(tiCount>=2){sig('timingExecution',12,12,"Ran out of time on multiple exam sections, core timing/execution problem");sig('practiceDeficit',5,12,"Multi-section timing issues usually reflect insufficient timed practice");}
   else if(tiCount===1){
     if(essayTi){sig('timingExecution',7,12,"Ran out of time on written section — pacing or application speed");sig('applicationDeficit',4,12,"Essay time issues can reflect slow rule application");}
     else{sig('timingExecution',6,12,"Ran out of time on one section — targeted pacing work needed");}
@@ -1511,16 +1527,16 @@ function scoreAll(rawD){
  if(d.leftBlank==='yes'){sig('timingExecution',10,10,"Leaving answers blank directly cost points");sig('practiceDeficit',4,10,"Incomplete answers stem from lack of timed practice");}
  else if(d.leftBlank==='few')sig('timingExecution',4,10,"A few incomplete answers suggest pacing pressure");
 
- if(d.examExperience==='knewMore'){sig('anxietyInterference',10,10,"Feeling you knew more than score reflects — classic anxiety signal");sig('timingExecution',6,10,"May also indicate execution issues under pressure");sig('overconfidence',5,10,"Possible miscalibration between practice and real exam");}
+ if(d.examExperience==='knewMore'){sig('anxietyInterference',10,10,"Feeling you knew more than score reflects, classic anxiety signal");sig('timingExecution',6,10,"May also indicate execution issues under pressure");sig('overconfidence',5,10,"Possible miscalibration between practice and real exam");}
  else if(d.examExperience==='couldntRecall'){sig('ruleDeficit',14,14,"Struggling to recall rules — clearest signal of rule deficit");sig('recognitionRecallGap',8,14,"Recall failures under pressure point to recall gap");}
  else if(d.examExperience==='recognizedNotWritten'){sig('applicationDeficit',12,12,"Recognizing issues but struggling to write — definition of application deficit");sig('recognitionRecallGap',12,12,"Clearest signal of recognition vs. recall gap");}
- else if(d.examExperience==='panicked'){sig('anxietyInterference',14,14,"Panicking or freezing — strong anxiety interference signal");sig('timingExecution',6,14,"Panic often causes time management to break down");}
- else if(d.examExperience==='exhausted'){sig('burnoutConsistency',12,12,"Feeling exhausted during exam — burnout signal");sig('anxietyInterference',5,12,"Exhaustion amplifies anxiety and impairs recall");}
- else if(d.examExperience==='surprised'){sig('overconfidence',12,12,"Surprised by difficulty — expectations were miscalibrated");sig('practiceDeficit',6,12,"Surprise often means practice didn't replicate real conditions");}
+ else if(d.examExperience==='panicked'){sig('anxietyInterference',14,14,"Panicking or freezing, strong anxiety interference signal");sig('timingExecution',6,14,"Panic often causes time management to break down");}
+ else if(d.examExperience==='exhausted'){sig('burnoutConsistency',12,12,"Feeling exhausted during exam, burnout signal");sig('anxietyInterference',5,12,"Exhaustion amplifies anxiety and impairs recall");}
+ else if(d.examExperience==='surprised'){sig('overconfidence',12,12,"Surprised by difficulty, expectations were miscalibrated");sig('practiceDeficit',6,12,"Surprise often means practice didn't replicate real conditions");}
 
  if(d.anxietyAffected==='yes')sig('anxietyInterference',14,14,"You confirmed anxiety significantly affected your performance");
  else if(d.anxietyAffected==='maybe')sig('anxietyInterference',6,14,"Uncertain about anxiety — worth taking seriously");
- if(d.staminaDrop==='yes'){sig('burnoutConsistency',8,8,"Clear stamina drop during exam — fatigue was a factor");sig('anxietyInterference',4,8,"Stamina drop can reflect anxiety under pressure");}
+ if(d.staminaDrop==='yes'){sig('burnoutConsistency',8,8,"Clear stamina drop during exam, fatigue was a factor");sig('anxietyInterference',4,8,"Stamina drop can reflect anxiety under pressure");}
  else if(d.staminaDrop==='somewhat')sig('burnoutConsistency',3,8,"Some stamina decline suggests fatigue");
 
  const sm={memorization:['ruleDeficit',8,"You identified memorization as your biggest challenge"],application:['applicationDeficit',8,"You identified application as your biggest challenge"],timing:['timingExecution',8,"You identified timing as your biggest challenge"],consistency:['burnoutConsistency',8,"You identified consistency as your biggest challenge"],burnout:['burnoutConsistency',10,"You identified burnout as primary issue"],badMethods:['methodMismatch',10,"You suspect methods were mismatched"],notEnoughPractice:['practiceDeficit',8,"You believe insufficient practice was key"]};
@@ -1580,7 +1596,8 @@ function buildWellbeingSection(fd) {
   const openToSupport = anxietyIssue || sleepPoor || isolated || hasStressors || mentalHealth;
   const noneSelected = !working && !caregiving && !financial && !mentalHealth && !anxietyIssue && !sleepPoor && !isolated && !otherEvents;
 
-  // No answers at all — skip section
+  // Skip if opted out or no answers
+  if (fd.wellbeingOptIn === 'no') return '';
   const anyAnswered = fd.workingDuringStudy || fd.caregiving || fd.financialStress ||
                       fd.mentalHealthLoad || fd.testAnxiety || fd.sleepQuality || fd.supportSystem;
   if (!anyAnswered) return '';
@@ -1614,11 +1631,11 @@ function buildWellbeingSection(fd) {
         <div class="wc-flag">Life Stressors Flagged</div>
         <div class="wc-title">External circumstances likely competed with your studying</div>
       </div>
-      <div class="wc-body">${stressorText} Research consistently shows that chronic life stress — financial pressure, caregiving load, health challenges, loss — impairs the sustained concentration and memory consolidation that bar prep demands. This isn't an excuse for what happened; it's context that should shape how you prepare next time.
+      <div class="wc-body">${stressorText} Research consistently shows that chronic life stress (financial pressure, caregiving load, health challenges, loss) impairs the sustained concentration and memory consolidation that bar prep demands. This isn't an excuse for what happened; it's context that should shape how you prepare next time.
       </div>
       <ul class="wc-recs">
         <li>Take stock honestly: have any of these circumstances changed, or are they likely to be the same during your next attempt?</li>
-        <li>If caregiving, financial, or health constraints are ongoing, design your study schedule around your real available capacity — not an ideal one.</li>
+        <li>If caregiving, financial, or health constraints are ongoing, design your study schedule around your real available capacity, not an ideal one.</li>
         <li>Consider speaking with your law school's bar support office; many have resources specifically for repeat takers dealing with external pressures.</li>
       </ul>
       <div class="wc-cite">Research basis: <a href="https://www.airweb.org/docs/default-source/documents-for-pages/accesslex/curcioscholarlypaper-2.pdf" target="_blank" rel="noopener">Curcio et al. (2019)</a> identified financial and family obligations as barriers associated with bar failure; <a href="https://arc.accesslex.org/bs-barriers/5/" target="_blank" rel="noopener">Kaufman et al. (2007)</a> found employment and life stressors more common among those who failed.</div>
@@ -1682,7 +1699,7 @@ function buildWellbeingSection(fd) {
   // Support prompt
   const supportBlock = (openToSupport || anxietyIssue || highStress) ? `
     <div style="margin-top:1rem;padding:1rem 1.25rem;background:rgba(13,115,119,.08);border-radius:6px;border:1px solid rgba(13,115,119,.2)">
-      <p style="font-size:.85rem;color:#0a4a4d;line-height:1.6"><strong>A note on professional support:</strong> If you're dealing with significant anxiety, depression, or other mental health challenges, working with a therapist or counselor — especially before your next attempt, not after — is worth treating as seriously as hiring a bar tutor. Evidence-based interventions like CBT have meaningful impact on test anxiety and performance. Many law schools offer free or reduced-cost counseling for alumni in the bar prep period; check with your school's student services office. <em>This tool does not provide medical or mental health advice. Nothing here constitutes a clinical assessment or diagnosis. Please consult a qualified healthcare or mental health professional for any clinical concerns.</em></p>
+      <p style="font-size:.85rem;color:#0a4a4d;line-height:1.6"><strong>A note on professional support:</strong> If you're dealing with significant anxiety, depression, or other mental health challenges, working with a therapist or counselor (especially before your next attempt, not after) is worth treating as seriously as hiring a bar tutor. Evidence-based interventions like CBT have meaningful impact on test anxiety and performance. Many law schools offer free or reduced-cost counseling for alumni in the bar prep period; check with your school's student services office. <em>This tool does not provide medical or mental health advice. Nothing here constitutes a clinical assessment or diagnosis. Please consult a qualified healthcare or mental health professional for any clinical concerns.</em></p>
     </div>` : '';
 
   return `<div class="r-section">
@@ -1721,7 +1738,7 @@ function buildReport(){
  const repeatNote = (nfd.attemptCount && nfd.attemptCount !== '1')
    ? ` This is your ${nfd.attemptCount === '2' ? 'second' : nfd.attemptCount === '3' ? 'third' : nfd.attemptCount + 'th'} attempt — the path forward requires not just more effort but a genuinely different approach.`
    : ''
- const summary=`On your ${att} at the ${exam}, you fell short ${margin}${scoreGap}. Based on your answers, this wasn't simply a matter of studying harder — the diagnostic points to specific, fixable patterns. Your most likely primary issue is <strong>${prim[0].name.toLowerCase()}</strong>: ${prim[0].meaning}${prim[1]?` A secondary driver appears to be <strong>${prim[1].name.toLowerCase()}</strong>, which compounded the difficulty.`:''} These are patterns, not fixed limitations — and patterns can be changed.${repeatNote}`;
+ const summary=`On your ${att} at the ${exam}, you fell short ${margin}${scoreGap}. Based on your answers, this wasn't simply a matter of studying harder; the diagnostic points to specific, fixable patterns. Your most likely primary issue is <strong>${prim[0].name.toLowerCase()}</strong>: ${prim[0].meaning}${prim[1]?` A secondary driver appears to be <strong>${prim[1].name.toLowerCase()}</strong>, which compounded the difficulty.`:''} These are patterns, not fixed limitations, and patterns can be changed.${repeatNote}`;
 
  const happened=buildHappened(mids);
  const recs=buildRecs(mids);
@@ -1732,7 +1749,7 @@ function buildReport(){
 
 
  const tchal={methodMismatch:"your study approach",practiceDeficit:"your practice volume",ruleDeficit:"your rule knowledge",applicationDeficit:"how you write and apply rules",anxietyInterference:"performance under pressure",burnoutConsistency:"your consistency and sustainability"}[prim[0]?.id]||"your preparation approach";
- const closing=`Not passing the bar exam is genuinely hard — not just logistically, but emotionally. Taking the time to actually diagnose what went wrong, rather than just studying harder, is the right move. The problems identified here are specific to ${tchal}. They're not a verdict on your intelligence or your ability to practice law. Most people who pass on a later attempt do so because they changed something real about how they prepared — not because they worked themselves into the ground doing the same things again. You've already done the hard part of being honest about what happened. Now use that honestly.`;
+ const closing=`Not passing the bar exam is genuinely hard, not just logistically but emotionally. Taking the time to actually diagnose what went wrong, rather than just studying harder, is the right move. The problems identified here are specific to ${tchal}. They're not a verdict on your intelligence or your ability to practice law. Most people who pass on a later attempt do so because they changed something real about how they prepared, not because they worked themselves into the ground doing the same things again. You've already done the hard part of being honest about what happened. Now use that honestly.`;
 
  const chartBars=modes.slice(0,6).map(m=>`<div class="bar-row"><div class="bar-lbl">${m.short}</div><div class="bar-track"><div class="bar-fill" style="width:${m.score}%;background:${CC[m.conf]}"></div></div><div class="bar-sc">${m.score}/100</div></div>`).join('');
 
@@ -1754,13 +1771,13 @@ function buildReport(){
    <div class="research-card">
     <div class="rc-category">Bar Exam — Study Habits</div>
     <div class="rc-cite">Jackson & Cochran (2021), AccessLex Institute</div>
-    <div class="rc-finding">Bar passage was strongly associated with daily hours studied and — importantly — with the number of daily study sessions, not just total hours. Studying earlier in the day correlated with passage. Candidates studying 10+ hours/day still reported time pressure on the exam, suggesting diminishing returns to raw volume without timed practice.</div>
+    <div class="rc-finding">Bar passage was strongly associated with daily hours studied and, importantly, with the number of daily study sessions, not just total hours. Studying earlier in the day correlated with passage. Candidates studying 10+ hours/day still reported time pressure on the exam, suggesting diminishing returns to raw volume without timed practice.</div>
     <a class="rc-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3890375" target="_blank" rel="noopener">AccessLex Research Report (2021) →</a>
    </div>
    <div class="research-card">
     <div class="rc-category">Bar Exam — Timed Essay Practice & Feedback</div>
     <div class="rc-cite">Curcio, Jiang & D'Haene (2019), Georgia State / AccessLex</div>
-    <div class="rc-finding">Practicing essay responses under timed conditions — and receiving feedback on them — correlated with bar passage. Those who failed reported more anxiety and lower self-confidence. Students who submitted practice essays for structured feedback (Mainero, 2016) were more likely to pass.</div>
+    <div class="rc-finding">Practicing essay responses under timed conditions, and receiving feedback on them, correlated with bar passage. Those who failed reported more anxiety and lower self-confidence. Students who submitted practice essays for structured feedback (Mainero, 2016) were more likely to pass.</div>
     <a class="rc-link" href="https://www.airweb.org/docs/default-source/documents-for-pages/accesslex/curcioscholarlypaper-2.pdf" target="_blank" rel="noopener">AccessLex / AALS Research Paper (2019) →</a>
    </div>
    <div class="research-card">
@@ -1772,14 +1789,14 @@ function buildReport(){
    <div class="research-card">
     <div class="rc-category">Learning Science — Spaced Repetition</div>
     <div class="rc-cite">Cepeda et al. (2008); Dunlosky et al. (2013)</div>
-    <div class="rc-finding">Spaced practice — distributing study and retrieval over time with increasing intervals — produces substantially stronger long-term retention than massed (cramming) practice. Dunlosky et al.'s large-scale review of learning strategies rated spaced practice and practice testing as "high utility" and re-reading/highlighting as "low utility." The spacing effect has been replicated thousands of times across subjects, ages, and material types.</div>
+    <div class="rc-finding">Spaced practice (distributing study and retrieval over time with increasing intervals) produces substantially stronger long-term retention than massed (cramming) practice. Dunlosky et al.'s large-scale review of learning strategies rated spaced practice and practice testing as "high utility" and re-reading/highlighting as "low utility." The spacing effect has been replicated thousands of times across subjects, ages, and material types.</div>
     <a class="rc-link" href="https://journals.sagepub.com/doi/10.1177/1529100612453266" target="_blank" rel="noopener">Dunlosky et al., Psychological Science in the Public Interest (2013) →</a>
     <div class="rc-caveat">Note: Most spaced repetition research uses word pairs or factual recall tasks. Its application to complex legal reasoning (applying rules to facts) is a reasonable inference, not a directly tested claim for bar prep specifically.</div>
    </div>
    <div class="research-card">
     <div class="rc-category">Learning Science — Passive vs. Active Study</div>
     <div class="rc-cite">Karpicke & Roediger (2008), Science</div>
-    <div class="rc-finding">Retrieval practice outperformed re-studying even when students believed the opposite — they systematically predicted re-reading would be more effective. This illusion of competence from passive review is directly relevant to bar prep: watching lectures and re-reading outlines feel productive but do not build the recall the exam requires.</div>
+    <div class="rc-finding">Retrieval practice outperformed re-studying even when students believed the opposite; they systematically predicted re-reading would be more effective. This illusion of competence from passive review is directly relevant to bar prep: watching lectures and re-reading outlines feel productive but do not build the recall the exam requires.</div>
     <a class="rc-link" href="https://www.science.org/doi/10.1126/science.1152408" target="_blank" rel="noopener">Science, 319, 966–968 →</a>
    </div>
    <div class="research-card">
@@ -1787,7 +1804,7 @@ function buildReport(){
     <div class="rc-cite">von der Embse et al. (2018), Journal of Affective Disorders</div>
     <div class="rc-finding">Meta-analysis of 238 studies: test anxiety was significantly and negatively related to performance across standardized exams, university entrance exams, and GPA. The cognitive (worry) dimension had stronger effects than physiological components. Confirmed independently for bar exam specifically by Kaufman et al. (2007).</div>
     <a class="rc-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0165032717303683" target="_blank" rel="noopener">Journal of Affective Disorders, 227, 483–493 →</a>
-    <div class="rc-caveat">Caveat: One 2022 study (Theobald et al.) found anxiety didn't independently predict performance when prior knowledge was controlled — suggesting anxiety and preparation deficits often co-occur rather than anxiety acting as a pure independent cause.</div>
+    <div class="rc-caveat">Caveat: One 2022 study (Theobald et al.) found anxiety didn't independently predict performance when prior knowledge was controlled, suggesting anxiety and preparation deficits often co-occur rather than anxiety acting as a pure independent cause.</div>
    </div>
    <div class="research-card">
     <div class="rc-category">What This Tool Is (and Isn't)</div>
@@ -1800,9 +1817,7 @@ function buildReport(){
  document.getElementById('rContent').innerHTML=`
   <div class="r-header"><div class="r-eyebrow">Diagnostic Report — ${exam} Exam</div><h1 class="r-title">Bar Bounceback<br><span>Diagnostic Report</span></h1><div class="r-date">Generated ${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}</div></div>
   <div class="r-section"><div class="s-heading"><span class="s-num">01</span><h2 class="s-h2">Summary</h2></div><p class="summary-p">${summary}</p></div>
-  <div class="evidence-note no-print">
-    <strong>Evidence-backed recommendations:</strong> Every suggestion in this report is grounded in peer-reviewed research. Citations are linked inline. Key sources: Taylor, Scott &amp; Jackson (AccessLex Institute, 2024) · Johns (U. of Denver / U. of Louisville Law Review, 2016) · Roediger &amp; Karpicke (2006) · Dunlosky et al. (2013) · Kaufman et al. (2007) · Jackson &amp; Cochran (2021).
-  </div>
+
   <div class="r-section"><div class="s-heading"><span class="s-num">02</span><h2 class="s-h2">Likely Failure Modes</h2></div>
    <div class="chart-wrap"><div class="chart-sm-title">Diagnostic Confidence Score (0–100)</div>${chartBars}<div class="chart-leg"><div class="leg-item"><div class="leg-dot" style="background:#c2410c"></div>High</div><div class="leg-item"><div class="leg-dot" style="background:#d97706"></div>Moderate</div><div class="leg-item"><div class="leg-dot" style="background:#78716c"></div>Low</div></div></div>
    <div class="mode-cards">${primCards}</div>${secCards}</div>
@@ -1815,7 +1830,25 @@ function buildReport(){
   <div class="closing-card"><div class="closing-eyebrow">A final note</div><p class="closing-text">${closing}</p></div>
   <div class="r-footer no-print"><button class="btn-print" onclick="window.print()">Print / Save as PDF</button><button class="btn-edit" onclick="showView('assess')">← Edit Answers</button><button class="btn-edit" onclick="startAssess()">Start Over</button></div>
   <p class="disclaimer no-print">This report is diagnostic, not a guarantee. It reflects patterns in your answers. Use it as a starting point, not a verdict.</p>
-  ${researchHTML}`;
+  ${researchHTML}
+  <div class="r-section r-bibliography">
+    <div class="s-heading"><span class="s-num" style="background:#6b7280;font-size:.65rem">REF</span><h2 class="s-h2">Research Sources</h2></div>
+    <div class="bib-body">
+      <p class="bib-note">The failure mode scoring, recommendations, and study guidance in this report are informed by the following published research and empirical studies:</p>
+      <ol class="bib-list">
+        <li>Kaufman, S., et al. (2007). <em>Barriers to bar passage.</em> AccessLex Institute. Passers completed nearly twice as many practice tests as those who failed; test anxiety identified as "debilitating to bar passage." <a href="https://arc.accesslex.org/bs-barriers/5/" target="_blank" rel="noopener">arc.accesslex.org →</a></li>
+        <li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <em>Psychological Science, 17</em>(3), 249–255. Retrieval practice produces substantially greater long-term retention than re-studying. <a href="https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener">doi →</a></li>
+        <li>Karpicke, J. D., &amp; Roediger, H. L. (2008). The critical importance of retrieval for learning. <em>Science, 319</em>(5865), 966–968. Students consistently misjudge re-reading as superior to self-testing. <a href="https://www.science.org/doi/10.1126/science.1152408" target="_blank" rel="noopener">doi →</a></li>
+        <li>Dunlosky, J., et al. (2013). Improving students' learning with effective learning techniques. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. Practice testing and spaced practice rated highest utility; re-reading and highlighting rated low. <a href="https://journals.sagepub.com/doi/10.1177/1529100612453266" target="_blank" rel="noopener">doi →</a></li>
+        <li>Jackson, M., &amp; Cochran, J. (2021). Bar exam preparation and passage: What the data tell us. <em>AccessLex Institute.</em> Daily session frequency and study hours predicted passage; diminishing returns above 10 hrs/day. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3890375" target="_blank" rel="noopener">SSRN →</a></li>
+        <li>Curcio, A., Jiang, X., &amp; D'Haene, G. (2019). Bar exam preparation factors. <em>AccessLex/Georgia State.</em> Timed essay practice with feedback correlated with passage; employment and family obligations identified as barriers. <a href="https://www.airweb.org/docs/default-source/documents-for-pages/accesslex/curcioscholarlypaper-2.pdf" target="_blank" rel="noopener">PDF →</a></li>
+        <li>von der Embse, N., et al. (2018). Test anxiety effects, predictors, and correlates: A 30-year meta-analytic review. <em>Journal of Affective Disorders, 227</em>, 483–493. Test anxiety negatively related to exam performance across 238 studies. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165032717303683" target="_blank" rel="noopener">doi →</a></li>
+        <li>Johns, S. (2016). Empirical reflections: A statistical evaluation of bar exam program interventions. <em>University of Louisville Law Review, 54</em>, 267. Structured written practice with individual feedback associated with measurable score increases; full program participation ≈ +7 points. <a href="https://ssrn.com/abstract=2738036" target="_blank" rel="noopener">SSRN →</a></li>
+        <li>Taylor, A. N., Scott, J. M., &amp; Jackson, J. (2024). <em>It's not where you start, it's how you finish: Predicting law school and bar success.</em> AccessLex Institute / LSSSE. Final law school GPA is the strongest predictor of bar passage; 1 SD of GPA growth associated with 5× odds of passing. <a href="https://accesslex.org" target="_blank" rel="noopener">AccessLex →</a></li>
+      </ol>
+      <p class="bib-disclaimer">This tool uses self-reported data and is not a clinical or legal instrument. Scoring weights are based on the research above, not individual regression coefficients. Treat findings as directional, not definitive.</p>
+    </div>
+  </div>`;
 
  showView('report');
 }
@@ -1824,16 +1857,16 @@ function buildReport(){
 function buildHappened(mids){
  const nfd = normalizeFormData(fd);
  const p=[];
- const sty={passive:"Your prep leaned heavily passive — lots of watching and reading, less testing yourself.",mixed:"Your prep was a mix of passive and active approaches.",active:"You took a relatively active approach to studying, which is a foundation to build on."}[fd.studyStyle]||"";
+ const sty={passive:"Your prep leaned heavily passive: lots of watching and reading, less testing yourself.",mixed:"Your prep was a mix of passive and active approaches.",active:"You took a relatively active approach to studying, which is a foundation to build on."}[fd.studyStyle]||"";
  if(sty)p.push(sty);
- if(fd.workingDuringPrep==='fullTime')p.push("You were working full-time during bar prep — one of the most difficult conditions to prepare under. This almost certainly compressed what you could realistically accomplish.");
+ if(fd.workingDuringPrep==='fullTime')p.push("You were working full-time during bar prep, one of the most difficult conditions to prepare under. This almost certainly compressed what you could realistically accomplish.");
  else if(fd.workingDuringPrep==='partTime')p.push("Balancing part-time work with bar prep likely affected both your available hours and your mental bandwidth.");
- if(mids.has('methodMismatch'))p.push("You spent a substantial portion of your time on lectures and reading — activities that feel productive but tend to build surface familiarity rather than the durable recall the exam tests.");
+ if(mids.has('methodMismatch'))p.push("You spent a substantial portion of your time on lectures and reading, activities that feel productive but tend to build surface familiarity rather than the durable recall the exam tests.");
  if(mids.has('practiceDeficit')){const mcbLow=['under200','200-500'].includes(fd.mbeQuestionsCompleted);const eLow=['0-5','6-15'].includes(fd.essaysWritten);if(mcbLow||eLow)p.push(`Practice volume was a real issue.${mcbLow?" Your MBE question count was below what most passing candidates complete.":""}${eLow?" Your essay volume was too low to build the writing fluency the exam demands.":""}`);}
  if(mids.has('recognitionRecallGap'))p.push("There's a meaningful gap between recognizing correct answers (what the MBE tests when you have options in front of you) and generating accurate rule statements from scratch (what essays demand). Your profile suggests this gap wasn't closed during prep.");
- if(mids.has('timingExecution'))p.push("Timing under exam conditions was a problem. Whether on the MBE, essays, or both, you felt rushed — and that often means leaving points on the table even when you knew the underlying material.");
+ if(mids.has('timingExecution'))p.push("Timing under exam conditions was a problem. Whether on the MBE, essays, or both, you felt rushed, and that often means leaving points on the table even when you knew the underlying material.");
  if(mids.has('anxietyInterference'))p.push("Anxiety appears to have played a real role. The exam's demands can amplify test anxiety in ways that practice alone doesn't address.");
- if(mids.has('burnoutConsistency'))p.push("There are signs your study plan lost momentum before the end. Whether from exhaustion, competing demands, or an unsustainable pace, consistency likely suffered — and bar prep is uniquely unforgiving of uneven effort.");
+ if(mids.has('burnoutConsistency'))p.push("There are signs your study plan lost momentum before the end. Whether from exhaustion, competing demands, or an unsustainable pace, consistency likely suffered, and bar prep is uniquely unforgiving of uneven effort.");
  if(fd.essayFeedback==='no')p.push("One thing that stands out: you were writing essays without external feedback. Without knowing whether your answers hit the marks graders look for, it's nearly impossible to course-correct.");
  return p.join(' ')||"Based on your answers, a combination of factors contributed. The failure modes above identify the most likely drivers.";
 }
@@ -1847,12 +1880,12 @@ function buildRecs(mids){
  const r=[];
  if(mids.has('ruleDeficit')){
   r.push(c(
-   "Build a daily rule recall routine: spend 20–30 minutes every morning writing rules from memory — without looking at outlines. Then check. The discomfort of not knowing is exactly what builds durable memory, not a sign you're doing it wrong. Research from AccessLex Institute (Taylor et al., 2024) confirms that final law school GPA — which reflects cumulative rule mastery — is the strongest predictor of bar passage, more than LSAT score.",
+   "Build a daily rule recall routine: spend 20–30 minutes every morning writing rules from memory, without looking at outlines. Then check. The discomfort of not knowing is exactly what builds durable memory, not a sign you're doing it wrong. Research from AccessLex Institute (Taylor et al., 2024) confirms that final law school GPA (which reflects cumulative rule mastery), is the strongest predictor of bar passage, more than LSAT score.",
    "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x",
    "Roediger & Karpicke (2006): retrieval practice produces substantially greater long-term retention than re-studying"
   ));
   r.push(c(
-   "Use spaced repetition flashcards (Anki or any SR system) for rule memorization — not as a passive review tool, but as an active retrieval drill. Space your reviews out: revisit material at increasing intervals rather than cramming it repeatedly in one sitting. Research consistently shows this produces stronger, more durable recall than massed practice.",
+   "Use spaced repetition flashcards (Anki or any SR system) for rule memorization, not as a passive review tool, but as an active retrieval drill. Space your reviews out: revisit material at increasing intervals rather than cramming it repeatedly in one sitting. Research consistently shows this produces stronger, more durable recall than massed practice.",
    "https://link.springer.com/article/10.3758/s13423-014-0608-4",
    "Cepeda et al. (2008) and extensive SR literature: spaced retrieval substantially outperforms massed practice for long-term retention"
   ));
@@ -1860,27 +1893,27 @@ function buildRecs(mids){
  }
  if(mids.has('applicationDeficit')){
   r.push(c(
-   "Write more essays — at least 4–5 per week under timed conditions. After each one, compare it line by line to a model answer and identify exactly where your structure, rules, or analysis diverged. Don't just note the score — note the gap. Research on bar passage found that students who submitted practice essays for structured feedback were more likely to pass.",
+   "Write more essays, at least 4–5 per week under timed conditions. After each one, compare it line by line to a model answer and identify exactly where your structure, rules, or analysis diverged. Don't just note the score; note the gap. Research on bar passage found that students who submitted practice essays for structured feedback were more likely to pass.",
    "https://www.airweb.org/docs/default-source/documents-for-pages/accesslex/curcioscholarlypaper-2.pdf",
    "Curcio, Jiang & D'Haene (2019): practicing essay responses under timed conditions and receiving feedback correlated with bar passage"
   ));
-  r.push("Find a consistent source of essay feedback — a tutor, a course with grading, an experienced peer, or a professor. Feedback you can act on is worth 10× the writing you do in isolation.");
+  r.push("Find a consistent source of essay feedback: a tutor, a course with grading, an experienced peer, or a professor. Feedback you can act on is worth 10× the writing you do in isolation.");
  }
  if(mids.has('recognitionRecallGap')){
   r.push(c(
-   "Shift from passive recognition to active recall. Stop re-reading outlines. Instead: close the book, write what you remember, then check. Cognitive science research shows that students systematically overestimate how much re-reading helps — and underestimate how much active retrieval builds durable knowledge. Only 11% of students spontaneously use retrieval practice even though the evidence for it is overwhelming.",
+   "Shift from passive recognition to active recall. Stop re-reading outlines. Instead: close the book, write what you remember, then check. Cognitive science research shows that students systematically overestimate how much re-reading helps, and underestimate how much active retrieval builds durable knowledge. Only 11% of students spontaneously use retrieval practice even though the evidence for it is overwhelming.",
    "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x",
    "Roediger & Karpicke (2006); Karpicke et al. (2009): students misjudge the advantage of re-reading over retrieval practice"
   ));
-  r.push("Practice writing IRAC structures from memory — not from an outline. The goal is to retrieve and deploy rules, not recognize them when prompted. The MBE and essays test fundamentally different cognitive skills.");
+  r.push("Practice writing IRAC structures from memory, not from an outline. The goal is to retrieve and deploy rules, not recognize them when prompted. The MBE and essays test fundamentally different cognitive skills.");
  }
  if(mids.has('timingExecution')){
   r.push(c(
-   "Start timed practice early — from week 2, not week 8. Every MBE set should be timed. Every essay should be written under a strict clock. One study of bar takers found that those who studied more hours per day were still more likely to report running out of time on the exam — suggesting that raw hours don't solve a pacing problem; only timed practice does.",
+   "Start timed practice early, from week 2, not week 8. Every MBE set should be timed. Every essay should be written under a strict clock. One study of bar takers found that those who studied more hours per day were still more likely to report running out of time on the exam, suggesting that raw hours don't solve a pacing problem; only timed practice does.",
    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3890375",
-   "Jackson & Cochran (2021): even high-hour studiers reported time pressure, suggesting timed practice — not raw hours — is what builds pacing"
+   "Jackson & Cochran (2021): even high-hour studiers reported time pressure, suggesting timed practice, not raw hours, is what builds pacing"
   ));
-  r.push("For MBE: drill to 1.8 min/question. For essays: 5 min planning, 25 min writing, 5 min reviewing — stick to this structure even if some analysis runs thinner. An incomplete-but-structured answer consistently scores better than a deep-but-unfinished one.");
+  r.push("For MBE: drill to 1.8 min/question. For essays: 5 min planning, 25 min writing, 5 min reviewing: stick to this structure even if some analysis runs thinner. An incomplete-but-structured answer consistently scores better than a deep-but-unfinished one.");
  }
  if(mids.has('practiceDeficit')){
   r.push(c(
@@ -1891,13 +1924,13 @@ function buildRecs(mids){
   r.push("Flip the ratio: in weeks 5+, 60–70% of your time should be practice and review, not content consumption. Consuming information and being tested on it are not the same thing, and the bar exam tests the latter.");
 
   r.push(c(
-   "Prioritize structured written practice with individual feedback above almost everything else. A University of Denver study found that each written submission reviewed by an individual coach — in workshops or mock bar exams — was associated with a measurable increase in bar exam score. Volume without feedback has much weaker returns.",
+   "Prioritize structured written practice with individual feedback above almost everything else. A University of Denver study found that each written submission reviewed by an individual coach (in workshops or mock bar exams) was associated with a measurable increase in bar exam score. Volume without feedback has much weaker returns.",
    "https://ssrn.com/abstract=2738036",
    "Johns (2016): each individually reviewed written submission associated with +0.25 bar exam points; full program participation ≈ +7 points"
   )); }
  if(mids.has('methodMismatch')){
   r.push(c(
-   "Cut lecture time dramatically. Watching videos of rules doesn't build the recall the exam tests. Use lectures only as brief orientations — 20–30 minutes per subject — then close them and practice. A comprehensive review of learning strategies rated re-reading and passive review as low-utility, while practice testing and distributed practice were rated high-utility.",
+   "Cut lecture time dramatically. Watching videos of rules doesn't build the recall the exam tests. Use lectures only as brief orientations (20–30 minutes per subject), then close them and practice. A comprehensive review of learning strategies rated re-reading and passive review as low-utility, while practice testing and distributed practice were rated high-utility.",
    "https://journals.sagepub.com/doi/10.1177/1529100612453266",
    "Dunlosky et al. (2013): large-scale review rated practice testing and distributed practice as 'high utility'; re-reading and highlighting as 'low utility'"
   ));
@@ -1905,20 +1938,20 @@ function buildRecs(mids){
  }
  if(mids.has('burnoutConsistency')){
   r.push(c(
-   "Design a sustainable schedule, not an ideal one. A 40-hour week you actually complete beats a 60-hour week that collapses on day four. Research on bar study habits found that the number of daily study sessions — not just total hours — was associated with passage. More frequent, shorter blocks outperform infrequent marathons.",
+   "Design a sustainable schedule, not an ideal one. A 40-hour week you actually complete beats a 60-hour week that collapses on day four. Research on bar study habits found that the number of daily study sessions, not just total hours, was associated with passage. More frequent, shorter blocks outperform infrequent marathons.",
    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3890375",
    "Jackson & Cochran (2021): higher number of daily study sessions (not just total hours) correlated with bar passage"
   ));
  }
  if(mids.has('anxietyInterference')){
   r.push(c(
-   "Address anxiety as a skill problem. Simulate exam conditions regularly — full timed sessions, unfamiliar questions, distracting environments. A meta-analysis of 238 studies confirmed that test anxiety is significantly and negatively related to performance on standardized exams. The most effective interventions combine exposure (practicing under pressure) with cognitive techniques.",
+   "Address anxiety as a skill problem. Simulate exam conditions regularly: full timed sessions, unfamiliar questions, distracting environments. A meta-analysis of 238 studies confirmed that test anxiety is significantly and negatively related to performance on standardized exams. The most effective interventions combine exposure (practicing under pressure) with cognitive techniques.",
    "https://www.sciencedirect.com/science/article/abs/pii/S0165032717303683",
    "von der Embse et al. (2018): meta-analysis of 238 studies; test anxiety significantly negatively related to standardized exam performance"
   ));
-  r.push("Consider working with a performance coach or therapist who specializes in test anxiety. Cognitive behavioral techniques have meaningful evidence behind them. This is not a soft recommendation — it's an evidence-based intervention for a documented performance problem.");
+  r.push("Consider working with a performance coach or therapist who specializes in test anxiety. Cognitive behavioral techniques have meaningful evidence behind them. This is not a soft recommendation; it's an evidence-based intervention for a documented performance problem.");
  }
- if(mids.has('overconfidence'))r.push("Build honest feedback loops from day one. Track MBE accuracy by subject. Grade essays against model answers. The goal isn't to feel ready — it's to actually be ready. Those are different, and bar prep is uniquely prone to creating the illusion of the former.");
+ if(mids.has('overconfidence'))r.push("Build honest feedback loops from day one. Track MBE accuracy by subject. Grade essays against model answers. The goal isn't to feel ready; it's to actually be ready. Those are different, and bar prep is uniquely prone to creating the illusion of the former.");
  return r.length?r:["Increase realistic practice volume with consistent timing, active recall over passive review, and a feedback loop that tells you whether your work is actually hitting the mark."];
 }
 
@@ -1931,7 +1964,7 @@ function buildPlan(mids){
  p.push({cat:"MPT Practice",target:"1 timed MPT/week",rationale:"One MPT per week builds format fluency without consuming disproportionate time"});
  const rw=mids.has('ruleDeficit')||mids.has('recognitionRecallGap');
  p.push({cat:"Rule Recall",target:rw?"30–40 min/day — active closed-book recall":"20 min/day of active recall",rationale:rw?"Active recall — not reading — is what builds durable rule knowledge":"Daily recall keeps rule memory fresh and retrievable"});
- p.push({cat:"Mistake Review",target:"2 dedicated sessions/week (60–90 min each)",rationale:"Reviewing mistakes is where most learning happens — treat it as primary, not an afterthought"});
+ p.push({cat:"Mistake Review",target:"2 dedicated sessions/week (60–90 min each)",rationale:"Reviewing mistakes is where most learning happens; treat it as primary, not an afterthought"});
  if(mids.has('anxietyInterference'))p.push({cat:"Simulated Sessions",target:"1 full timed simulation/week",rationale:"Reducing exam-day surprise requires experiencing exam-like pressure in practice"});
  if(mids.has('burnoutConsistency'))p.push({cat:"Recovery Days",target:"1 full rest day/week (non-negotiable)",rationale:"A day off each week makes the other six more effective"});
  return p;
@@ -1939,7 +1972,7 @@ function buildPlan(mids){
 
 function buildFlags(mids){
  const f=[];
- if(mids.has('methodMismatch'))f.push("Defaulting back to heavy lecture and outline-reading time. It feels productive — it isn't. If you spend more than 15–20% of prep time consuming content passively, flag it.");
+ if(mids.has('methodMismatch'))f.push("Defaulting back to heavy lecture and outline-reading time. It feels productive, but it isn't. If you spend more than 15–20% of prep time consuming content passively, flag it.");
  if(mids.has('practiceDeficit'))f.push("Underestimating how many reps you need. If you're not tracking your question and essay count weekly, you're probably doing less than you think.");
  if(mids.has('applicationDeficit'))f.push("Writing essays without comparing them to model answers. Self-assessment without a benchmark doesn't tell you whether your analysis actually works.");
  if(mids.has('anxietyInterference'))f.push("Avoiding timed and simulated practice because it's uncomfortable. The discomfort of practice is what reduces the shock of the real exam.");
@@ -1952,9 +1985,9 @@ function buildFlags(mids){
 function buildTools(mids){
  const t=[];
  t.push({cat:"MBE Question Bank",text:"Adaptibar, Themis, or a similar adaptive question bank. Prioritize one with detailed explanations and subject-level performance tracking."});
- if(mids.has('ruleDeficit')||mids.has('recognitionRecallGap'))t.push({cat:"Flashcard / Spaced Repetition",text:'Anki (free, highly customizable) or a bar-specific deck. Spaced repetition is one of the most robustly supported techniques in learning science — distributing practice across time with increasing intervals produces substantially stronger long-term retention than massed review. The key is active recall: the answer must require generating the rule, not just recognizing it. <a class="rc-link" href="https://link.springer.com/article/10.3758/s13423-014-0608-4" target="_blank" rel="noopener">Cepeda et al. (2008)</a> and <a class="rc-link" href="https://journals.sagepub.com/doi/10.1177/1529100612453266" target="_blank" rel="noopener">Dunlosky et al. (2013)</a> both rate spaced retrieval practice as among the highest-utility learning strategies available.'});
+ if(mids.has('ruleDeficit')||mids.has('recognitionRecallGap'))t.push({cat:"Flashcard / Spaced Repetition",text:'Anki (free, highly customizable) or a bar-specific deck. Spaced repetition is one of the most robustly supported techniques in learning science, distributing practice across time with increasing intervals produces substantially stronger long-term retention than massed review. The key is active recall: the answer must require generating the rule, not just recognizing it. <a class="rc-link" href="https://link.springer.com/article/10.3758/s13423-014-0608-4" target="_blank" rel="noopener">Cepeda et al. (2008)</a> and <a class="rc-link" href="https://journals.sagepub.com/doi/10.1177/1529100612453266" target="_blank" rel="noopener">Dunlosky et al. (2013)</a> both rate spaced retrieval practice as among the highest-utility learning strategies available.'});
  if(mids.has('applicationDeficit'))t.push({cat:"Essay Feedback",text:"Graded feedback through your commercial course, a bar tutor, a law school professor, or a committed peer group. Writing essays in isolation is one of the lowest-yield activities in bar prep."});
- if(mids.has('burnoutConsistency'))t.push({cat:"Accountability Partner",text:"A study partner who checks in weekly on whether you hit your targets. Accountability without shame — just honest reporting."});
+ if(mids.has('burnoutConsistency'))t.push({cat:"Accountability Partner",text:"A study partner who checks in weekly on whether you hit your targets. Accountability without shame, just honest reporting."});
  if(mids.has('anxietyInterference')&&(fd.anxietyAffected==='yes'||fd.examExperience==='panicked'))t.push({cat:"Performance Coach or Therapist",text:"If anxiety meaningfully affected your performance, a therapist or performance coach with experience in test anxiety is worth treating as a serious investment."});
  t.push({cat:"Study Tracking",text:"A simple spreadsheet to log daily MBE count, essay count, and subject accuracy. You need to know your numbers to know if you're on track."});
  return t;
